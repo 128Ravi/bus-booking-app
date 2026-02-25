@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Available Buses</title></head>
+<body>
+    <h2>Available Buses</h2>
+    <ul>
+        {% for bus in buses %}
+        <li>
+            <strong>{{ bus.name }}</strong> — {{ bus.route }} 
+            (<a href="/book/{{ bus.id }}">Book Now</a>)
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">Home</a>
+</body>
+</html>

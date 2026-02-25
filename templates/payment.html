@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Payment Page 💳</h2>
+
+<div class="summary-box">
+    <p><strong>Passenger:</strong> {{ name }}</p>
+    <p><strong>Seats:</strong> {{ seats }}</p>
+    <p><strong>Total Amount:</strong> ₹ {{ amount }}</p>
+</div>
+
+<form action="/process_payment" method="POST" class="payment-form">
+    <input type="text" placeholder="Card Number" required>
+    <input type="text" placeholder="Card Holder Name" required>
+    <input type="text" placeholder="Expiry (MM/YY)" required>
+    <input type="text" placeholder="CVV" required>
+    <button type="submit">Pay ₹ {{ amount }}</button>
+</form>
+
+{% endblock %}

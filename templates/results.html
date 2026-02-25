@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Available Buses</h2>
+
+{% for bus in buses %}
+<div class="bus-card">
+    <h3>{{ bus.name }}</h3>
+    <p>Seats Available: {{ bus.available_seats }}</p>
+    <a href="/select/{{ bus.id }}/{{ date }}">Select Seats</a>
+</div>
+{% endfor %}
+
+{% endblock %}

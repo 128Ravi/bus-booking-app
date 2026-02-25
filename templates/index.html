@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="search-box">
+    <form action="/search" method="POST">
+        <input type="text" name="from" placeholder="From City" required>
+        <input type="text" name="to" placeholder="To City" required>
+        <input type="date" name="date" required>
+        <button type="submit">Search Buses</button>
+    </form>
+</div>
+
+{% endblock %}
